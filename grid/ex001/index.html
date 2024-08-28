@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        div.container_pai {
+            background-color: orange;
+            display: grid;
+            grid-template-columns: auto auto auto 100px;
+            padding: 10px;
+            gap: 5px; /* separação entre as linhas e colunas da grade */
+            /* row-gap ou column-gap para espaços entre linhas ou colunas separadamete */
+        }
+
+        div.container_pai > div {
+            background-color: aqua;
+            border: 1px solid black;
+            font-size: 1.4em;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container_pai">
+        <div>Menu 1</div>
+        <div>Menu 2</div>
+        <div>Menu 3</div>
+        <div>Menu 4</div>
+        <div>Menu 5</div>
+        <div>Menu 6</div>
+        <div>Menu 7</div>
+        <div>Menu 8</div>
+        <div>Menu 9</div>
+    </div>
+    
+</body>
+</html>

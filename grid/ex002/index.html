@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        div.container_pai {
+            background-color: orange;
+            display: grid;
+            grid-template-columns: auto auto 100px;
+            padding: 10px;
+            gap: 5px; /* separação entre as linhas e colunas da grade */
+            /* row-gap ou column-gap para espaços entre linhas ou colunas separadamete */
+
+        }
+
+        div.container_pai > div {
+            background-color: aqua;
+            border: 1px solid black;
+            font-size: 1.4em;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        div.container_pai > header {
+            /*grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-column: 1/4; /* shorthand do grid column star/end */
+            background-color: orange;
+            border: 1px solid black;
+            font-size: 2em;
+            text-align: center;
+            padding: 5px;
+
+        }
+
+        div.container_pai > div#hc {
+            /* grid-row-start: 2;
+            grid-row-end: 5; */
+            /* grid-row: 2/5;  shorthand star/end*/
+            grid-area: 2 / 2 / span 3 / span 1;
+            /* linha 2 / coluna 2 / ocupa 3 linhas / ocupa 1 coluna */
+            background-color: grey;
+            border: 1px solid black;
+            font-size: 1.4em;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #rdp {
+            background-color: green;
+            border: 6px solid purple;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 10px;
+            color: yellow;
+            grid-area: 5 / 2 / span 1 / span 2;
+            /* linha 5 / coluna 2 / ocupa 1 linha / ocupa 2 colunas */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container_pai">
+        <header> Menu Geral </header>
+        <div >Menu 1</div>
+        <div id="hc">Menu 2</div>
+        <div>Menu 3</div>
+        <div>Menu 4</div>
+        <div>Menu 5</div>
+        <div>Menu 6</div>
+        <div>Menu 7</div>
+        <footer id="rdp">SubMenu</footer>
+    </div>
+    
+</body>
+</html>
